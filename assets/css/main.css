@@ -1,0 +1,243 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #333333;
+    background:
+        radial-gradient(circle at 8% 0%, rgba(26, 115, 232, 0.08), transparent 42%),
+        #f8fafc;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    gap: 40px;
+    width: min(100%, 980px);
+    margin: 0 auto;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: row;
+        gap: 15px;
+    }
+}
+
+header nav a:hover {
+    color: #0D47A1;
+}
+
+header nav a {
+    color: #333333;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+header nav a:last-child {
+    margin-left: auto;
+    background: #1A73E8;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(26, 115, 232, 0.18);
+}
+
+header nav a:last-child:hover {
+    color: #ffffff;
+    background: #0D47A1;
+    text-decoration: none;
+}
+
+/* MAIN */
+main {
+    padding: 100px 20px 50px 20px;
+    /* espaço para header fixo */
+    width: min(100%, 900px);
+    margin: 0 auto;
+}
+
+main>* {
+    max-width: 720px;
+}
+
+/* HEADINGS */
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #111111;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem 0;
+    color: #111111;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 1.5rem 0 0.75rem 0;
+    color: #111111;
+}
+
+/* PARAGRAPHS */
+p {
+    margin-bottom: 1.25rem;
+    color: #555555;
+}
+
+strong {
+    color: #111111;
+}
+
+/* LISTS */
+ul,
+ol {
+    margin-left: 20px;
+    margin-bottom: 1.25rem;
+}
+
+li {
+    margin-bottom: 0.6rem;
+}
+
+/* LINKS */
+a {
+    color: #1A73E8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* CTA sem depender de classe no HTML atual.
+   Restringe para links de contato para não transformar links contextuais em botão. */
+main>p>a[href$="contato/"]:only-child {
+    display: inline-block;
+    background: linear-gradient(180deg, #2f7fed 0%, #1A73E8 100%);
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 14px 24px;
+    border-radius: 10px;
+    border: 1px solid rgba(13, 71, 161, 0.18);
+    text-decoration: none;
+    margin-top: 0.25rem;
+    transition: background-color 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow:
+        0 10px 22px rgba(26, 115, 232, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+main>p>a[href$="contato/"]:only-child:hover {
+    background-color: #0D47A1;
+    transform: translateY(-2px);
+    box-shadow:
+        0 14px 26px rgba(13, 71, 161, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    text-decoration: none;
+}
+
+/* CTA BUTTONS */
+a.cta-button {
+    display: inline-block;
+    background-color: #1A73E8;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 14px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+a.cta-button:hover {
+    background-color: #0D47A1;
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+    margin-top: 4rem;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #888888;
+    border-top: 1px solid #eee;
+}
+
+footer p {
+    width: min(100%, 900px);
+    margin: 0 auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    header nav {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    header nav a {
+        padding: 8px 9px;
+        font-size: 0.95rem;
+    }
+
+    header nav a:last-child {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 120px 15px 50px 15px;
+    }
+
+    main>p>a[href$="contato/"]:only-child {
+        width: 100%;
+        text-align: center;
+    }
+}
