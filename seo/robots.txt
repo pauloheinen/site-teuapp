@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://teuapp.com.br/sitemap.xml
