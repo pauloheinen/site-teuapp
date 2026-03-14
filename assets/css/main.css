@@ -62,7 +62,7 @@ header {
 
 header nav {
     display: flex;
-    gap: 40px;
+    gap: 28px;
     width: min(100%, 980px);
     margin: 0 auto;
     align-items: center;
@@ -85,6 +85,7 @@ header nav a {
     text-decoration: none;
     padding: 8px 10px;
     border-radius: 8px;
+    white-space: nowrap;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
