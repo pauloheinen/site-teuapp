@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Projetos — teuapp | Apps e sistemas desenvolvidos sob medida</title>
+    <meta name="description"
+        content="Projetos desenvolvidos pelo teuapp: app de auditoria mobile, sistema de gestão para joalherias e backend de gestão de rebanho bovino. Exemplos reais de soluções sob medida." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="https://teuapp.dev.br/projetos/" />
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <link rel="preload" href="/assets/css/main.css" as="style" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="teuapp" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Projetos — teuapp | Apps e sistemas desenvolvidos sob medida" />
+    <meta property="og:description"
+        content="Projetos reais desenvolvidos sob medida: app mobile de auditoria, sistema desktop para joalheria e API de gestão agropecuária." />
+    <meta property="og:url" content="https://teuapp.dev.br/projetos/" />
+    <meta property="og:image" content="https://teuapp.dev.br/assets/logo.png" />
+</head>
+
+<body class="content-page page-projetos">
+
+    <header>
+        <nav>
+            <a href="/">Início</a>
+            <a href="/criar-app/">Criar App</a>
+            <a href="/criar-sistema/">Criar Sistema</a>
+            <a href="/desenvolver-software/">Software</a>
+            <a href="/como-funciona/">Como funciona</a>
+            <a href="/projetos/">Projetos</a>
+            <a href="/sobre/">Sobre</a>
+            <a class="nav-cta" href="/contato/">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1>Projetos desenvolvidos</h1>
+
+        <p>
+            Esses são três projetos reais que desenvolvi como freela, cada um resolvendo uma dor específica de negócio.
+            Nenhum começou com escopo fechado — todos partiram de uma conversa sobre o problema e evoluíram
+            de forma incremental.
+        </p>
+
+        <section class="project-card" aria-labelledby="projeto-auditor">
+            <div class="project-header">
+                <div class="project-meta">
+                    <span class="project-tag">App mobile</span>
+                    <span class="project-tag">Flutter</span>
+                    <span class="project-tag">Android</span>
+                </div>
+                <h2 id="projeto-auditor">Meu Auditor</h2>
+                <p class="project-subtitle">App mobile para auditoria de conformidade em campo</p>
+            </div>
+            <div class="project-body">
+                <div class="project-problem">
+                    <h3>O problema</h3>
+                    <p>
+                        Profissionais que fazem auditorias de conformidade in loco precisavam registrar itens, tirar
+                        fotos das evidências e gerar um relatório — tudo isso em papel ou em planilhas, sem uma
+                        ferramenta dedicada para campo.
+                    </p>
+                </div>
+                <div class="project-solution">
+                    <h3>O que foi construído</h3>
+                    <p>
+                        App mobile Flutter para Android com checklist de auditoria configurável, classificação de
+                        itens por conformidade, captura de fotos como evidência por item, armazenamento local offline
+                        e <strong>geração de relatório em PDF</strong> para compartilhamento direto pelo celular.
+                    </p>
+                    <ul class="project-features">
+                        <li>Criação e gerenciamento de múltiplas auditorias</li>
+                        <li>Itens classificados como conforme ou não conforme</li>
+                        <li>Fotos vinculadas a cada item do checklist</li>
+                        <li>Geração de PDF com todos os dados e imagens</li>
+                        <li>compartilhamento de checklist via WhatsApp</li>
+                        <li>Funciona 100% offline — dados salvos no dispositivo</li>
+                    </ul>
+                </div>
+                <div class="project-stack">
+                    <h3>Stack utilizada</h3>
+                    <p>Flutter · GetX · SharedPreferences · PDF · image_picker · share_plus</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-card" aria-labelledby="projeto-karat">
+            <div class="project-header">
+                <div class="project-meta">
+                    <span class="project-tag">Sistema desktop</span>
+                    <span class="project-tag">Flutter Windows</span>
+                    <span class="project-tag">SQLite local</span>
+                </div>
+                <h2 id="projeto-karat">Karat Gestão</h2>
+                <p class="project-subtitle">Sistema desktop de gestão para joalherias</p>
+            </div>
+            <div class="project-body">
+                <div class="project-problem">
+                    <h3>O problema</h3>
+                    <p>
+                        Uma joalheria precisava controlar estoque de peças, cadastro de clientes, fornecedores e
+                        movimentações de venda, com acompanhamento da cotação do ouro em tempo real para apoiar
+                        decisões de precificação — sem depender de planilhas ou sistemas genéricos que não atendiam
+                        o fluxo específico do negócio.
+                    </p>
+                </div>
+                <div class="project-solution">
+                    <h3>O que foi construído</h3>
+                    <p>
+                        Sistema desktop para Windows com banco de dados local, sem necessidade de servidor ou
+                        internet para operação básica. Dashboard com métricas de vendas, cotação do ouro atualizada
+                        e controle de metas mensais.
+                    </p>
+                    <ul class="project-features">
+                        <li>Dashboard com vendas do mês, comparativo e valor do estoque</li>
+                        <li>Cotação do ouro em tempo real integrada ao painel</li>
+                        <li>Controle de metas mensais de vendas</li>
+                        <li>CRUD de produtos, clientes e fornecedores</li>
+                        <li>Movimentação de estoque com histórico</li>
+                        <li>Banco SQLite local com backup automatizado</li>
+                    </ul>
+                </div>
+                <div class="project-stack">
+                    <h3>Stack utilizada</h3>
+                    <p>Flutter (Windows) · Drift (SQLite) · Riverpod · HTTP</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-card" aria-labelledby="projeto-gado">
+            <div class="project-header">
+                <div class="project-meta">
+                    <span class="project-tag">API / Backend</span>
+                    <span class="project-tag">Node.js + TypeScript</span>
+                    <span class="project-tag">IA integrada</span>
+                </div>
+                <h2 id="projeto-gado">Gado Gestor — API</h2>
+                <p class="project-subtitle">Backend de sistema completo para gestão de rebanho bovino</p>
+            </div>
+            <div class="project-body">
+                <div class="project-problem">
+                    <h3>O problema</h3>
+                    <p>
+                        Um app de gestão agropecuária precisava migrar toda a lógica de negócio do frontend para
+                        um backend robusto, com autenticação real, escopo por usuário, regras de negócio
+                        complexas (compra/venda de animais entre usuários do app, histórico de saúde, eventos
+                        reprodutivos) e integração com IA para cotações de mercado.
+                    </p>
+                </div>
+                <div class="project-solution">
+                    <h3>O que foi construído</h3>
+                    <p>
+                        API REST completa em Node.js + TypeScript com autenticação JWT, banco de dados PostgreSQL e
+                        integração com a IA para cotações de mercado de gado em tempo real.
+                    </p>
+                    <ul class="project-features">
+                        <li>Autenticação completa: login, cadastro, recuperação de senha via e-mail</li>
+                        <li>CRUD de animais com histórico de peso e eventos sanitários</li>
+                        <li>Gestão financeira: compra e venda de animais com estorno automático</li>
+                        <li>Transferência de animal entre usuários do app (compra/venda com histórico)</li>
+                        <li>Sistema de alertas automáticos gerados no backend</li>
+                        <li>Cotações de mercado via IA</li>
+                        <li>Banco de dados + armazenamento de arquivos online</li>
+                        <li>Envio de e-mails</li>
+                    </ul>
+                </div>
+                <div class="project-stack">
+                    <h3>Stack utilizada</h3>
+                    <p>Node.js · Express · TypeScript · PostgreSQL · JWT · IA · Gmail API </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-note" aria-label="Nota sobre os projetos">
+            <h2>Uma observação honesta</h2>
+            <p>
+                Esses três projetos foram desenvolvidos para clientes reais e estão em uso. Nenhum é um projeto
+                de estudo — cada um resolve uma necessidade específica de negócio, com as complexidades reais
+                que isso implica: regras de negócio que mudam, decisões de escopo no meio do caminho,
+                integrações com serviços externos e necessidade de manutenção.
+            </p>
+            <p>
+                Se o teu projeto parece simples agora, provavelmente vai ganhar complexidade conforme evolui.
+                Ter alguém que já navegou por esse caminho ajuda a antecipar decisões — e evitar retrabalho caro.
+            </p>
+            <p>
+                <a class="inline-cta" href="/contato/">Me conta o teu cenário</a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>teuapp — desenvolvimento de soluções digitais sob medida</p>
+    </footer>
+
+</body>
+
+</html>

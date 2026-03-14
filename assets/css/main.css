@@ -1249,3 +1249,247 @@ body.homepage main>* {
         padding-top: 186px;
     }
 }
+
+/* =============================================
+   PROJECT PREVIEW CARDS (homepage)
+   ============================================= */
+
+.project-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+}
+
+a.project-preview-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+a.project-preview-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.project-preview-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.project-preview-tags span {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--accent-subtle);
+    color: var(--accent);
+    letter-spacing: 0.02em;
+}
+
+a.project-preview-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--heading);
+    margin: 0;
+}
+
+a.project-preview-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0;
+    flex: 1;
+}
+
+.project-preview-link {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent);
+    margin-top: 4px;
+}
+
+/* =============================================
+   PROJECT DETAIL PAGE
+   ============================================= */
+
+.page-projetos main > h1 {
+    max-width: 720px;
+}
+
+.page-projetos main > p:first-of-type {
+    max-width: 680px;
+    color: var(--muted);
+    margin-bottom: 48px;
+}
+
+.project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px 40px;
+    margin-bottom: 32px;
+}
+
+.project-header {
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.project-tag {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: var(--accent-subtle);
+    color: var(--accent);
+    letter-spacing: 0.02em;
+}
+
+.project-card h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--heading);
+    margin: 0 0 6px;
+}
+
+.project-subtitle {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0;
+}
+
+.project-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.project-problem,
+.project-solution,
+.project-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-stack {
+    grid-column: 1 / -1;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.project-body h3 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--muted);
+    margin: 0;
+}
+
+.project-body p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--text);
+    margin: 0;
+}
+
+.project-stack p {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.project-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.project-features li {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text);
+    padding-left: 18px;
+    position: relative;
+}
+
+.project-features li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 12px;
+}
+
+.project-note {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px 40px;
+    margin-top: 16px;
+}
+
+.project-note h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.project-note p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin-bottom: 14px;
+    max-width: 680px;
+}
+
+.project-note p:last-child {
+    margin-bottom: 0;
+}
+
+/* =============================================
+   RESPONSIVE — PROJECTS
+   ============================================= */
+
+@media (max-width: 900px) {
+    .project-preview-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .project-body {
+        grid-template-columns: 1fr;
+    }
+    .project-stack {
+        grid-column: 1;
+    }
+}
+
+@media (max-width: 640px) {
+    .project-preview-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-card,
+    .project-note {
+        padding: 24px 20px;
+    }
+}
