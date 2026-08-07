@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imobiliária Modelo — Encontre seu Imóvel em Venâncio Aires - RS</title>
+    <meta name="description"
+        content="Portal modelo de imóveis para imobiliárias e corretores autônomos em Venâncio Aires - RS. Encontre casas, apartamentos, terrenos e coberturas." />
+    <link rel="canonical" href="https://imobiliaria.teuapp.dev.br/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/imobiliaria.css" />
+</head>
+
+<body>
+
+    <!-- SVG sprite para ícones -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+        <symbol id="icon-bed" viewBox="0 0 20 20" fill="none">
+            <path d="M2 10V6a1 1 0 011-1h14a1 1 0 011 1v4M2 10h16M2 10v4m16-4v4M2 14h16M5 9V7h10v2"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-bath" viewBox="0 0 20 20" fill="none">
+            <path d="M3 10h14v2a5 5 0 01-5 5H8a5 5 0 01-5-5v-2zm0 0V5a2 2 0 012-2h2a2 2 0 012 2v1M4 14v2m12-2v2"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-area" viewBox="0 0 20 20" fill="none">
+            <rect x="2" y="2" width="16" height="16" rx="1" stroke="currentColor" stroke-width="1.5" />
+            <path d="M2 7h16M7 2v16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-car" viewBox="0 0 20 20" fill="none">
+            <path d="M4 10l1.5-4h9L16 10M4 10H2v3h2v1h2v-1h8v1h2v-1h2v-3h-2M4 10h12" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="6" cy="12" r="1" stroke="currentColor" stroke-width="1.5" />
+            <circle cx="14" cy="12" r="1" stroke="currentColor" stroke-width="1.5" />
+        </symbol>
+        <symbol id="icon-pin" viewBox="0 0 20 20" fill="none">
+            <path d="M10 2a6 6 0 016 6c0 4-6 10-6 10S4 12 4 8a6 6 0 016-6z" stroke="currentColor" stroke-width="1.5" />
+            <circle cx="10" cy="8" r="2" stroke="currentColor" stroke-width="1.5" />
+        </symbol>
+        <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="none">
+            <path
+                d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.11-1.34A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+                d="M8.5 10.5c.35.7.85 1.38 1.5 1.97.65.6 1.37 1.05 2.15 1.37.1.04.22.02.3-.06l1.12-.84c.1-.08.24-.08.34.01l2.1 2.1c.1.1.1.26 0 .36-.5.5-1.1.84-1.76.84C10.5 16.25 7.75 13.5 7.75 10c0-.66.35-1.26.84-1.76.1-.1.26-.1.36 0l2.1 2.1c.1.1.1.24.01.34l-.84 1.12a.23.23 0 00-.04.28z"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-arrow" viewBox="0 0 20 20" fill="none">
+            <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-close" viewBox="0 0 20 20" fill="none">
+            <path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </symbol>
+    </svg>
+
+    <header class="real-header">
+        <div class="real-nav-container">
+            <a href="/" class="real-logo">
+                Imóveis <span>Venâncio</span>
+                <span class="demo-badge">Demo</span>
+            </a>
+            <a href="https://teuapp.dev.br/" class="back-to-teuapp">← teuapp.dev.br</a>
+        </div>
+    </header>
+
+    <section class="real-hero">
+        <h1>Encontre o imóvel ideal em Venâncio Aires</h1>
+        <p>Casas, sobrados, apartamentos e terrenos nos melhores bairros — atendimento direto pelo WhatsApp.</p>
+    </section>
+
+    <div class="filter-bar">
+        <div class="filter-topline">
+            <div class="listing-toggle" role="tablist" aria-label="Tipo de anúncio">
+                <button type="button" class="listing-toggle-btn active" data-listing-type="sale">Comprar</button>
+                <button type="button" class="listing-toggle-btn" data-listing-type="rent">Alugar</button>
+            </div>
+        </div>
+
+        <div class="filter-row filter-row-search">
+            <div class="filter-group filter-group-wide filter-group-search">
+                <label for="filter-search">Digite aqui sua busca</label>
+                <input type="text" id="filter-search" placeholder="Digite aqui sua busca" oninput="applyFilters()" />
+            </div>
+        </div>
+
+        <div class="filter-row filter-row-core">
+            <div class="filter-group">
+                <label for="filter-type">Tipo de Imóvel</label>
+                <select id="filter-type" onchange="applyFilters()">
+                    <option value="all">Todos os Tipos</option>
+                    <option value="apartamento">Apartamento</option>
+                    <option value="apartamento-garden">Apartamento Garden</option>
+                    <option value="area-rural">Área Rural</option>
+                    <option value="box">Box</option>
+                    <option value="casa">Casa</option>
+                    <option value="casa-comercial">Casa Comercial</option>
+                    <option value="casa-de-condominio">Casa De Condomínio</option>
+                    <option value="chacara">Chácara</option>
+                    <option value="cobertura">Cobertura</option>
+                    <option value="duplex">Duplex</option>
+                    <option value="fazenda">Fazenda</option>
+                    <option value="geminado">Geminado</option>
+                    <option value="kitnet">Kitnet</option>
+                    <option value="loft">Loft</option>
+                    <option value="loja">Loja</option>
+                    <option value="pavilhao">Pavilhão</option>
+                    <option value="ponto-comercial">Ponto Comercial</option>
+                    <option value="predio-comercial">Prédio Comercial</option>
+                    <option value="sala-comercial">Sala Comercial</option>
+                    <option value="salao-comercial">Salão Comercial</option>
+                    <option value="sitio">Sítio</option>
+                    <option value="sobrado">Sobrado</option>
+                    <option value="studio">Studio</option>
+                    <option value="terreno">Terreno</option>
+                    <option value="terreno-comercial">Terreno Comercial</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-city">Cidade</label>
+                <input type="text" id="filter-city" value="Venâncio Aires" placeholder="Venâncio Aires"
+                    oninput="applyFilters()" />
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-code">Código do imóvel</label>
+                <input type="text" id="filter-code" placeholder="Ex: 2" oninput="applyFilters()" />
+            </div>
+        </div>
+
+        <div class="filter-row filter-row-quick">
+            <div class="filter-group">
+                <label for="filter-bedrooms">Quartos</label>
+                <select id="filter-bedrooms" onchange="applyFilters()">
+                    <option value="all">Qualquer quantidade</option>
+                    <option value="1">1+ Quarto</option>
+                    <option value="2">2+ Quartos</option>
+                    <option value="3">3+ Quartos</option>
+                    <option value="4">4+ Quartos</option>
+                    <option value="5">5+ Quartos</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-suites">Suítes</label>
+                <select id="filter-suites" onchange="applyFilters()">
+                    <option value="all">Qualquer quantidade</option>
+                    <option value="1">1+ Suíte</option>
+                    <option value="2">2+ Suítes</option>
+                    <option value="3">3+ Suítes</option>
+                    <option value="4">4+ Suítes</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-vacancies">Vagas</label>
+                <select id="filter-vacancies" onchange="applyFilters()">
+                    <option value="all">Qualquer quantidade</option>
+                    <option value="1">1+ Vaga</option>
+                    <option value="2">2+ Vagas</option>
+                    <option value="3">3+ Vagas</option>
+                    <option value="4">4+ Vagas</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="filter-row filter-row-price-sort">
+            <div class="filter-group filter-price-block">
+                <label id="filter-price-label" for="filter-price">Preço de compra</label>
+                <div class="range-meta">
+                    <span id="filter-price-min-label">R$ 20.000</span>
+                    <span id="filter-price-value">R$ 2.500.000</span>
+                </div>
+                <input type="range" id="filter-price" min="20000" max="2500000" step="1000" value="2500000"
+                    oninput="applyFilters()" />
+            </div>
+
+            <div class="filter-group">
+                <label for="sort-order">Ordenar por</label>
+                <select id="sort-order" onchange="applyFilters()">
+                    <option value="featured">Destaques primeiro</option>
+                    <option value="price-asc">Menor preço</option>
+                    <option value="price-desc">Maior preço</option>
+                </select>
+            </div>
+        </div>
+
+        <details class="filter-details filter-group-wide">
+            <summary>Outros Filtros</summary>
+            <div class="amenity-grid">
+                <label class="checkbox-label"><input type="checkbox" class="amenity-filter" value="academia"
+                        onchange="applyFilters()" /><span>Academia</span></label>
+                <label class="checkbox-label"><input type="checkbox" class="amenity-filter" value="ar-condicionado"
+                        onchange="applyFilters()" /><span>Ar condicionado</span></label>
+                <label class="checkbox-label"><input type="checkbox" class="amenity-filter" value="area-de-servico"
+                        onchange="applyFilters()" /><span>Área de serviço</span></label>
+                <label class="checkbox-label"><input type="checkbox" class="amenity-filter" value="armario-embutido"
+                        onchange="applyFilters()" /><span>Armário embutido</span></label>
+                <label class="checkbox-label"><input type="checkbox" class="amenity-filter" value="churrasqueira"
+                        onchange="applyFilters()" /><span>Churrasqueira</span></label>
+                <label class="checkbox-label"><input type="checkbox" class="amenity-filter" value="closet"
+                        onchange="applyFilters()" /><span>Closet</span></label>
+                <label class="checkbox-label"><input type="checkbox" class="amenity-filter" value="elevador"
+                        onchange="applyFilters()" /><span>Elevador</span></label>
+                <label class="checkbox-label"><input type="checkbox" class="amenity-filter" value="interfone"
+                        onchange="applyFilters()" /><span>Interfone</span></label>
+                <label class="checkbox-label"><input type="checkbox" class="amenity-filter" value="jardim"
+                        onchange="applyFilters()" /><span>Jardim</span></label>
+                <label class="checkbox-label"><input type="checkbox" class="amenity-filter" value="lareira"
+                        onchange="applyFilters()" /><span>Lareira</span></label>
+                <label class="checkbox-label"><input type="checkbox" class="amenity-filter" value="lavabo"
+                        onchange="applyFilters()" /><span>Lavabo</span></label>
+                <label class="checkbox-label"><input type="checkbox" class="amenity-filter" value="patio"
+                        onchange="applyFilters()" /><span>Pátio</span></label>
+                <label class="checkbox-label"><input type="checkbox" class="amenity-filter" value="piscina"
+                        onchange="applyFilters()" /><span>Piscina</span></label>
+                <label class="checkbox-label"><input type="checkbox" class="amenity-filter" value="portao-eletronico"
+                        onchange="applyFilters()" /><span>Portão eletrônico</span></label>
+                <label class="checkbox-label"><input type="checkbox" class="amenity-filter" value="sacada"
+                        onchange="applyFilters()" /><span>Sacada</span></label>
+                <label class="checkbox-label"><input type="checkbox" class="amenity-filter" value="salao-de-festas"
+                        onchange="applyFilters()" /><span>Salão de festas</span></label>
+            </div>
+        </details>
+
+    </div>
+
+    <main class="main-content">
+        <div class="section-title">
+            <span id="results-count">Imóveis Disponíveis</span>
+        </div>
+        <div class="properties-grid" id="properties-container">
+            <!-- Renderizado via JS -->
+        </div>
+    </main>
+
+    <!-- Modal Detalhes do Imóvel -->
+    <div class="detail-modal" id="detail-modal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModalDirect()" aria-label="Fechar">
+                <svg width="18" height="18" aria-hidden="true">
+                    <use href="#icon-close" />
+                </svg>
+            </button>
+            <div id="modal-body-content"></div>
+        </div>
+    </div>
+
+    <script src="./assets/js/properties.js"></script>
+    <script>
+        const container = document.getElementById("properties-container");
+        const countSpan = document.getElementById("results-count");
+        const priceRange = document.getElementById("filter-price");
+        const priceLabel = document.getElementById("filter-price-label");
+        const priceMinLabel = document.getElementById("filter-price-min-label");
+        const priceValueLabel = document.getElementById("filter-price-value");
+        const listingToggleButtons = Array.from(document.querySelectorAll("[data-listing-type]"));
+        const amenityInputs = Array.from(document.querySelectorAll(".amenity-filter"));
+        const PRICE_RANGES = {
+            sale: { label: "Preço de compra", min: 20000, max: 2500000, step: 1000 },
+            rent: { label: "Preço de aluguel", min: 200, max: 61000, step: 100 }
+        };
+
+        let activeListingType = "sale";
+
+        function formatCurrency(val) {
+            return new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(val);
+        }
+
+        function icon(id, cls) {
+            return `<svg class="${cls || 'spec-svg'}" aria-hidden="true"><use href="#icon-${id}"/></svg>`;
+        }
+
+        function normalizeText(value) {
+            return String(value || "")
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .toLowerCase();
+        }
+
+        function getListingPrice(item) {
+            return activeListingType === "rent" ? item.price_rent : item.price;
+        }
+
+        function updatePriceControl() {
+            const config = PRICE_RANGES[activeListingType];
+            priceLabel.textContent = config.label;
+            priceMinLabel.textContent = formatCurrency(config.min);
+            priceRange.min = String(config.min);
+            priceRange.max = String(config.max);
+            priceRange.step = String(config.step);
+            if (!priceRange.dataset.userTouched) {
+                priceRange.value = String(config.max);
+            } else {
+                const current = Number(priceRange.value);
+                if (Number.isNaN(current) || current < config.min || current > config.max) {
+                    priceRange.value = String(config.max);
+                }
+            }
+            priceValueLabel.textContent = formatCurrency(Number(priceRange.value));
+        }
+
+        function syncListingButtons() {
+            listingToggleButtons.forEach(button => {
+                button.classList.toggle("active", button.dataset.listingType === activeListingType);
+            });
+        }
+
+        function setListingType(type) {
+            if (type === activeListingType) return;
+            activeListingType = type;
+            priceRange.dataset.userTouched = "";
+            syncListingButtons();
+            updatePriceControl();
+            applyFilters();
+        }
+
+        function getSelectedAmenities() {
+            return amenityInputs
+                .filter(input => input.checked)
+                .map(input => input.value);
+        }
+
+        function matchesSelectedAmenities(item, selectedAmenities) {
+            if (!selectedAmenities.length) return true;
+            const normalizedAmenities = new Set((item.amenities || []).map(normalizeText));
+            return selectedAmenities.every(amenity => normalizedAmenities.has(normalizeText(amenity)));
+        }
+
+        // ── Cards ──────────────────────────────────────────
+        function renderProperties(list) {
+            countSpan.innerText = list.length === 1
+                ? "1 imóvel disponível"
+                : `${list.length} imóveis disponíveis`;
+            if (list.length === 0) {
+                container.innerHTML = `<div class="empty-state">
+                    <p>Nenhum imóvel encontrado com estes filtros.</p>
+                    <span>Tente alterar os critérios de busca acima.</span>
+                </div>`;
+                return;
+            }
+
+            container.innerHTML = list.map(item => `
+                <article class="property-card"
+                         onclick="openModal('${item.id}')"
+                         role="button"
+                         tabindex="0"
+                         aria-label="Ver detalhes: ${item.title}">
+                    <div class="card-image-wrapper">
+                        <img src="${item.image}" alt="${item.title}" loading="lazy" />
+                        <span class="property-badge">${item.typeLabel}</span>
+                        ${item.featured ? '<span class="featured-badge">Destaque</span>' : ''}
+                    </div>
+                    <div class="card-body">
+                        <div class="property-price">${typeof getListingPrice(item) === "number" ? formatCurrency(getListingPrice(item)) : "Sob consulta"}</div>
+                        <h3 class="property-title">${item.title}</h3>
+                        <p class="property-location">${icon('pin')} ${item.location}</p>
+                        <div class="property-specs">
+                            ${item.bedrooms > 0 ? `<div class="spec-item">${icon('bed')}<span>${item.bedrooms} dorm.</span></div>` : ''}
+                            ${item.bathrooms > 0 ? `<div class="spec-item">${icon('bath')}<span>${item.bathrooms} banh.</span></div>` : ''}
+                            <div class="spec-item">${icon('area')}<span>${item.area} m²</span></div>
+                            ${item.parking > 0 ? `<div class="spec-item">${icon('car')}<span>${item.parking} vag.</span></div>` : ''}
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="view-detail-hint">Ver detalhes ${icon('arrow')}</span>
+                    </div>
+                </article>
+            `).join("");
+
+            container.querySelectorAll('.property-card').forEach(card => {
+                card.addEventListener('keydown', e => {
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+                });
+            });
+        }
+
+        // ── Filtros ─────────────────────────────────────────
+        function applyFilters() {
+            priceValueLabel.textContent = formatCurrency(Number(priceRange.value));
+            const type = document.getElementById("filter-type").value;
+            const bedrooms = document.getElementById("filter-bedrooms").value;
+            const suites = document.getElementById("filter-suites").value;
+            const vacancies = document.getElementById("filter-vacancies").value;
+            const city = normalizeText(document.getElementById("filter-city").value);
+            const code = normalizeText(document.getElementById("filter-code").value);
+            const search = normalizeText(document.getElementById("filter-search").value);
+            const sort = document.getElementById("sort-order").value;
+            const maxPrice = Number(priceRange.value);
+            const selectedAmenities = getSelectedAmenities();
+
+            let filtered = PROPERTIES_DATA.filter(item => {
+                if (item.listing_type !== activeListingType) return false;
+                if (type !== "all" && item.type !== type) return false;
+                if (city && !normalizeText(item.location).includes(city)) return false;
+                if (code && !normalizeText(item.id).includes(code) && !normalizeText(String(item.id).padStart(4, "0")).includes(code)) return false;
+                if (bedrooms !== "all" && item.bedrooms < Number(bedrooms)) return false;
+                if (suites !== "all" && item.suites < Number(suites)) return false;
+                if (vacancies !== "all" && item.parking < Number(vacancies)) return false;
+                if (search) {
+                    const searchableText = [item.title, item.location, item.description, item.typeLabel].map(normalizeText).join(" ");
+                    if (!searchableText.includes(search)) return false;
+                }
+                const price = getListingPrice(item);
+                if (typeof price !== "number" || price > maxPrice) return false;
+                if (!matchesSelectedAmenities(item, selectedAmenities)) return false;
+                return true;
+            });
+
+            if (sort === "price-asc") filtered.sort((a, b) => getListingPrice(a) - getListingPrice(b));
+            else if (sort === "price-desc") filtered.sort((a, b) => getListingPrice(b) - getListingPrice(a));
+            else filtered.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+
+            renderProperties(filtered);
+        }
+
+        // ── Modal ───────────────────────────────────────────
+        function openModal(id) {
+            const item = PROPERTIES_DATA.find(p => p.id === id);
+            if (!item) return;
+
+            const ref = `Ref. ${item.id.padStart(4, '0')}`;
+
+            const galleryHtml = item.gallery.length > 1
+                ? `<div class="modal-gallery">
+                       <div class="gallery-main">
+                           <img id="gallery-main-img" src="${item.gallery[0]}" alt="${item.title}" />
+                       </div>
+                       <div class="gallery-thumbs">
+                           ${item.gallery.map((src, i) => `
+                               <img src="${src}" alt="Foto ${i + 1}"
+                                    class="gallery-thumb ${i === 0 ? 'active' : ''}"
+                                    onclick="setGalleryImg('${src}', this)" />
+                           `).join('')}
+                       </div>
+                   </div>`
+                : `<div class="modal-hero-image">
+                       <img src="${item.gallery[0]}" alt="${item.title}" />
+                   </div>`;
+
+            const amenitiesHtml = item.amenities.length > 0
+                ? `<div class="modal-amenities">
+                       <h4>Comodidades</h4>
+                       <ul class="amenities-list">
+                           ${item.amenities.map(a => `<li>${a}</li>`).join('')}
+                       </ul>
+                   </div>`
+                : '';
+
+            document.getElementById('modal-body-content').innerHTML = `
+                ${galleryHtml}
+                <div class="modal-info">
+                    <div class="modal-header-row">
+                        <span class="modal-badge">${item.typeLabel}</span>
+                        <span class="modal-code">${ref}</span>
+                    </div>
+                    <div class="modal-price">${typeof getListingPrice(item) === "number" ? formatCurrency(getListingPrice(item)) : "Sob consulta"}</div>
+                    <h2 class="modal-title">${item.title}</h2>
+                    <p class="modal-location">${icon('pin')} ${item.location}</p>
+
+                    <div class="modal-specs">
+                        ${item.bedrooms > 0 ? `<div class="modal-spec">${icon('bed')}<span>${item.bedrooms} Dormitório${item.bedrooms > 1 ? 's' : ''}</span></div>` : ''}
+                        ${item.bathrooms > 0 ? `<div class="modal-spec">${icon('bath')}<span>${item.bathrooms} Banheiro${item.bathrooms > 1 ? 's' : ''}</span></div>` : ''}
+                        <div class="modal-spec">${icon('area')}<span>${item.area} m²</span></div>
+                        ${item.parking > 0 ? `<div class="modal-spec">${icon('car')}<span>${item.parking} Vaga${item.parking > 1 ? 's' : ''}</span></div>` : ''}
+                    </div>
+
+                    <div class="modal-description">
+                        <h4>Sobre o imóvel</h4>
+                        <p>${item.description}</p>
+                    </div>
+
+                    ${amenitiesHtml}
+
+                    <div class="modal-agent">
+                        <div class="agent-avatar">${item.agent.name.split(' ').map(n => n[0]).join('').slice(0, 2)}</div>
+                        <div class="agent-detail">
+                            <div class="agent-name">${item.agent.name}</div>
+                            <div class="agent-creci">CRECI ${item.agent.creci}</div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/${item.agent.phone}?text=Olá!%20Tenho%20interesse%20no%20imóvel%20'${encodeURIComponent(item.title)}'%20(${encodeURIComponent(ref)})%20em%20Venâncio%20Aires"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="modal-whatsapp-btn"
+                       onclick="event.stopPropagation()">
+                        ${icon('whatsapp', 'btn-icon')} Falar com o corretor
+                    </a>
+                </div>
+            `;
+
+            document.getElementById('detail-modal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function setGalleryImg(src, thumb) {
+            document.getElementById('gallery-main-img').src = src;
+            document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        }
+
+        function closeModal(e) {
+            if (e.target === document.getElementById('detail-modal')) closeModalDirect();
+        }
+
+        function closeModalDirect() {
+            document.getElementById('detail-modal').style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+        listingToggleButtons.forEach(button => {
+            button.addEventListener("click", () => setListingType(button.dataset.listingType));
+        });
+
+        priceRange.addEventListener("input", () => {
+            priceRange.dataset.userTouched = "1";
+            priceValueLabel.textContent = formatCurrency(Number(priceRange.value));
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            syncListingButtons();
+            updatePriceControl();
+            applyFilters();
+        });
+    </script>
+</body>
+
+</html>
