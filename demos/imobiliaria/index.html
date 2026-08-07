@@ -287,6 +287,16 @@
             return activeListingType === "rent" ? item.price_rent : item.price;
         }
 
+        function getPropertyRef(item) {
+            return `Ref. ${item.id.padStart(4, '0')}`;
+        }
+
+        function getWhatsAppUrl(item) {
+            const ref = getPropertyRef(item);
+            const message = `Olá! Tenho interesse no imóvel ${item.title} (${ref}) em Venâncio Aires.`;
+            return `https://wa.me/${item.agent.phone}?text=${encodeURIComponent(message)}`;
+        }
+
         function updatePriceControl() {
             const config = PRICE_RANGES[activeListingType];
             priceLabel.textContent = config.label;
@@ -368,7 +378,17 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <span class="view-detail-hint">Ver detalhes ${icon('arrow')}</span>
+                        <div class="card-actions">
+                            <span class="view-detail-hint">Ver detalhes ${icon('arrow')}</span>
+                            <a href="${getWhatsAppUrl(item)}"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="whatsapp-button card-whatsapp"
+                               aria-label="Falar pelo WhatsApp sobre ${item.title}"
+                               onclick="event.stopPropagation()">
+                                ${icon('whatsapp', 'btn-icon')} WhatsApp
+                            </a>
+                        </div>
                     </div>
                 </article>
             `).join("");
@@ -424,7 +444,7 @@
             const item = PROPERTIES_DATA.find(p => p.id === id);
             if (!item) return;
 
-            const ref = `Ref. ${item.id.padStart(4, '0')}`;
+            const ref = getPropertyRef(item);
 
             const galleryHtml = item.gallery.length > 1
                 ? `<div class="modal-gallery">
@@ -485,7 +505,7 @@
                         </div>
                     </div>
 
-                    <a href="https://wa.me/${item.agent.phone}?text=Olá!%20Tenho%20interesse%20no%20imóvel%20'${encodeURIComponent(item.title)}'%20(${encodeURIComponent(ref)})%20em%20Venâncio%20Aires"
+                    <a href="${getWhatsAppUrl(item)}"
                        target="_blank"
                        rel="noopener noreferrer"
                        class="modal-whatsapp-btn"
