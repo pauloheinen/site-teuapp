@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Área do Aluno — Marina Costa Personal</title>
+    <meta name="description"
+        content="Demo de área do aluno para personal trainer com publicações de progresso, fotos, treinos e acompanhamento do personal." />
+    <link rel="canonical" href="https://personal.teuapp.dev.br/aluno/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/personal.css" />
+    <script src="../assets/js/aluno.js" defer></script>
+</head>
+
+<body class="student-page">
+    <header class="fit-header">
+        <nav class="fit-nav">
+            <a class="fit-logo" href="/demos/personal/">Marina<span>Costa</span><small>Demo</small></a>
+            <div class="fit-nav-links" aria-label="Navegação principal">
+                <a href="/demos/personal/">Site</a>
+                <a href="#publicar">Publicar</a>
+                <a href="#feed">Feed</a>
+            </div>
+            <a class="fit-nav-cta"
+                href="https://wa.me/5551999998888?text=Ol%C3%A1%21%20Quero%20falar%20sobre%20meu%20acompanhamento."
+                target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </nav>
+    </header>
+
+    <main class="student-shell">
+        <section class="student-hero">
+            <div>
+                <p class="eyebrow">área do aluno</p>
+                <h1>Registre evolução, treino e fotos em um só lugar.</h1>
+                <p>
+                    Demo de feed privado para aluno e personal acompanharem progresso visual, frequência e observações
+                    semanais.
+                </p>
+            </div>
+            <div class="student-profile">
+                <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=500&h=500&fit=crop"
+                    alt="Aluna sorrindo em ambiente de treino" />
+                <div>
+                    <strong>Camila Rodrigues</strong>
+                    <span>Objetivo: emagrecimento e força</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="student-metrics" aria-label="Resumo do acompanhamento">
+            <article>
+                <span>Treinos no mês</span>
+                <strong>14</strong>
+                <small>+3 vs. mês anterior</small>
+            </article>
+            <article>
+                <span>Check-ins</span>
+                <strong>6</strong>
+                <small>fotos e medidas</small>
+            </article>
+            <article>
+                <span>Sequência</span>
+                <strong>21 dias</strong>
+                <small>sem pausa longa</small>
+            </article>
+        </section>
+
+        <section class="student-layout">
+            <form class="post-composer" id="post-form">
+                <div class="composer-header" id="publicar">
+                    <div>
+                        <p class="eyebrow">nova publicação</p>
+                        <h2>Adicionar atualização</h2>
+                    </div>
+                    <div class="role-toggle" role="group" aria-label="Autor da publicação">
+                        <label><input type="radio" name="authorRole" value="Aluno" checked /> Aluno</label>
+                        <label><input type="radio" name="authorRole" value="Personal" /> Personal</label>
+                    </div>
+                </div>
+
+                <label class="field-group">
+                    <span>Nome</span>
+                    <input type="text" id="author-name" value="Camila Rodrigues" required />
+                </label>
+
+                <label class="field-group">
+                    <span>Tipo</span>
+                    <select id="post-type">
+                        <option value="Progresso">Progresso</option>
+                        <option value="Treino concluído">Treino concluído</option>
+                        <option value="Avaliação do personal">Avaliação do personal</option>
+                        <option value="Observação">Observação</option>
+                    </select>
+                </label>
+
+                <label class="field-group">
+                    <span>Descrição</span>
+                    <textarea id="post-text" rows="5"
+                        placeholder="Ex: treino de inferiores concluído, nova foto de evolução ou feedback da semana."
+                        required></textarea>
+                </label>
+
+                <label class="upload-box" for="post-photo">
+                    <input type="file" id="post-photo" accept="image/*" />
+                    <span>Selecionar foto</span>
+                    <small>Use uma foto de progresso, treino ou avaliação.</small>
+                </label>
+
+                <div class="photo-preview" id="photo-preview" hidden>
+                    <img id="photo-preview-img" alt="Prévia da foto selecionada" />
+                    <button type="button" id="remove-photo">Remover foto</button>
+                </div>
+
+                <button class="primary-action composer-submit" type="submit">Publicar no feed</button>
+            </form>
+
+            <section class="student-feed" id="feed" aria-live="polite">
+                <div class="feed-heading">
+                    <div>
+                        <p class="eyebrow">feed privado</p>
+                        <h2>Evolução da aluna</h2>
+                    </div>
+                    <button type="button" class="clear-feed" id="reset-feed">Restaurar demo</button>
+                </div>
+                <div class="feed-list" id="feed-list"></div>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>
