@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoVale Veículos — Catálogo de Carros Seminovos</title>
+    <meta name="description"
+        content="Demo de site para revenda de veículos com estoque filtrável, ficha do carro, opcionais e proposta rápida via WhatsApp." />
+    <link rel="canonical" href="https://revenda.teuapp.dev.br/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/revenda.css" />
+    <script src="./assets/js/vehicles-data.js?v=20260810-1" defer></script>
+    <script src="./assets/js/revenda.js?v=20260810-1" defer></script>
+</head>
+
+<body>
+    <header class="auto-header">
+        <nav class="auto-nav">
+            <a class="auto-logo" href="/demos/revenda/">AutoVale<span>Veículos</span><small>Demo</small></a>
+            <div class="auto-nav-tabs" aria-label="Navegação da revenda">
+                <a class="active" href="/demos/revenda/">Estoque</a>
+                <a href="/demos/revenda/funcionalidades/">Funcionalidades</a>
+            </div>
+            <a class="back-link" href="/demos/">← Ver demos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auto-hero">
+            <div class="hero-copy">
+                <p class="eyebrow">showroom digital para revendas locais</p>
+                <h1>Seu estoque organizado, rápido e pronto para proposta.</h1>
+                <p>
+                    Uma vitrine de veículos com foco em consulta pelo celular: filtros objetivos, ficha completa,
+                    opcionais em destaque e atendimento direto com o vendedor.
+                </p>
+                <div class="hero-actions">
+                    <a class="hero-cta" href="#estoque">Ver estoque</a>
+                    <a class="hero-secondary" href="/demos/revenda/funcionalidades/">Funcionalidades previstas</a>
+                </div>
+            </div>
+            <div class="hero-feature">
+                <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=1100&h=760&fit=crop"
+                    alt="Sedã seminovo em ambiente de showroom" />
+                <div>
+                    <strong>Honda Civic Touring</strong>
+                    <span>2021 · 48.000 km · Automático</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-strip" aria-label="Diferenciais da revenda">
+            <div>
+                <strong>Estoque ativo</strong>
+                <span>veículos cadastrados e atualizados</span>
+            </div>
+            <div>
+                <strong>Procedência</strong>
+                <span>histórico e documentação conferidos</span>
+            </div>
+            <div>
+                <strong>Financia</strong>
+                <span>simulação encaminhada pelo vendedor</span>
+            </div>
+        </section>
+
+        <section class="filter-panel" aria-label="Filtros do estoque">
+            <div class="field search-field">
+                <label for="search">Buscar veículo</label>
+                <input id="search" type="search" placeholder="Marca, modelo ou versão" />
+            </div>
+            <div class="field">
+                <label for="brand">Marca</label>
+                <select id="brand">
+                    <option value="all">Todas</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="fuel">Combustível</label>
+                <select id="fuel">
+                    <option value="all">Todos</option>
+                    <option value="Flex">Flex</option>
+                    <option value="Gasolina">Gasolina</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Híbrido">Híbrido</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="year">Ano mínimo</label>
+                <select id="year">
+                    <option value="all">Qualquer</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="sort">Ordenar</label>
+                <select id="sort">
+                    <option value="featured">Destaques</option>
+                    <option value="price-asc">Menor preço</option>
+                    <option value="price-desc">Maior preço</option>
+                    <option value="year-desc">Mais novos</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="inventory-section" id="estoque">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">estoque disponível</p>
+                    <h2 id="result-count">Veículos encontrados</h2>
+                </div>
+                <span>Atendimento direto com vendedor</span>
+            </div>
+            <div class="vehicle-grid" id="vehicle-grid"></div>
+        </section>
+    </main>
+
+    <div class="vehicle-modal" id="vehicle-modal" aria-hidden="true">
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" type="button" id="modal-close" aria-label="Fechar">×</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+</body>
+
+</html>

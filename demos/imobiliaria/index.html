@@ -231,6 +231,88 @@
     </div>
 
     <main class="main-content">
+        <section class="future-features" aria-labelledby="future-features-title">
+            <div class="future-features-header">
+                <div>
+                    <span>Funcionalidades previstas</span>
+                    <h2 id="future-features-title">Recursos idealizados para uma imobiliária operar melhor o site.</h2>
+                    <p>
+                        Esta área exemplifica módulos que podem entrar em uma versão sob medida: geração assistida por
+                        IA, central de publicações, integração com redes sociais e fluxo de aprovação antes de qualquer
+                        conteúdo ir ao ar.
+                    </p>
+                </div>
+                <div class="feature-tabs" aria-label="Categorias de funcionalidades">
+                    <span>Conteúdo</span>
+                    <span>Publicações</span>
+                    <span>Operação</span>
+                </div>
+            </div>
+
+            <div class="future-features-grid">
+                <article class="content-center-card">
+                    <div class="content-center-head">
+                        <div>
+                            <span>Central de conteúdo</span>
+                            <h3>Imóvel cadastrado, conteúdo pronto para vender.</h3>
+                        </div>
+                        <strong>Conceito</strong>
+                    </div>
+                    <div class="content-preview">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=620&fit=crop"
+                            alt="Sobrado moderno com piscina para publicação" loading="lazy" />
+                        <div>
+                            <span class="channel-badge">Instagram</span>
+                            <h4>Sobrado moderno com piscina</h4>
+                            <p>
+                                Legenda sugerida por IA: sobrado de alto padrão no bairro Brígida, com living integrado,
+                                piscina e espaço gourmet para receber bem.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="approval-row">
+                        <span>Aguardando revisão</span>
+                        <strong>Agendar para hoje · 18:30</strong>
+                    </div>
+                </article>
+
+                <article class="workflow-card">
+                    <span>Fluxo sugerido</span>
+                    <ol>
+                        <li><strong>1. Cadastro:</strong> corretor informa fotos, valor, bairro e características.</li>
+                        <li><strong>2. IA:</strong> o sistema sugere descrição curta, título e legenda por canal.</li>
+                        <li><strong>3. Revisão:</strong> imobiliária aprova, edita ou bloqueia o texto antes de sair.
+                        </li>
+                        <li><strong>4. Publicação:</strong> post vai para Instagram, X/Twitter e Facebook com link do
+                            imóvel.</li>
+                    </ol>
+                </article>
+            </div>
+
+            <div class="feature-roadmap" aria-label="Funcionalidades previstas">
+                <article>
+                    <span class="feature-status">Previsto</span>
+                    <h3>Descrições geradas por IA</h3>
+                    <p>Texto comercial curto a partir dos dados do imóvel, evitando descrições longas e genéricas.</p>
+                </article>
+                <article>
+                    <span class="feature-status">Previsto</span>
+                    <h3>Publicação em redes sociais</h3>
+                    <p>Geração de posts para Instagram, X/Twitter e Facebook, com link rastreável para o imóvel.</p>
+                </article>
+                <article>
+                    <span class="feature-status">Previsto</span>
+                    <h3>Aprovação antes de publicar</h3>
+                    <p>Equipe revisa legenda, fotos e canais antes do agendamento ou publicação imediata.</p>
+                </article>
+                <article>
+                    <span class="feature-status">Opcional</span>
+                    <h3>Calendário de conteúdo</h3>
+                    <p>Agenda semanal de imóveis em destaque, imóveis baixados de preço e novidades do estoque.</p>
+                </article>
+            </div>
+        </section>
+
         <div class="section-title">
             <span id="results-count">Imóveis Disponíveis</span>
         </div>
@@ -493,6 +575,7 @@
                     <div class="modal-description">
                         <h4>Sobre o imóvel</h4>
                         <p>${item.description}</p>
+                        <span class="ai-note">Texto comercial pode ser gerado por IA a partir dos dados do cadastro e revisado pela imobiliária antes de publicar.</span>
                     </div>
 
                     ${amenitiesHtml}
